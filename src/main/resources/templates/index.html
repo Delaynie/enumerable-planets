@@ -8,7 +8,20 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
+<h1>Learn About Planets</h1>
+<h2>Here you'll find out how many earth days are in each planet's year cycle.</h2>
+
+<table class="table-striped padded">
+    <tbody>
+    <tr th:each="planet : ${Planets}">
+        <th>Planet name: &MediumSpace; </th>
+        <td th:text="${planet.name}"></td>
+        <th> &MediumSpace; &MediumSpace; &MediumSpace; Earth days in a year: &MediumSpace; </th>
+        <td th:text="${planet.yearLength}"></td>
+    </tr>
+
+    </tbody>
+</table>
 
 </body>
 </html>
